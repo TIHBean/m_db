@@ -1,0 +1,984 @@
+
+/*字體設定*/
+@font-face {
+    font-family: 'title_style';
+    src: url('../fonts/HanyiSentyTang.ttf') format('truetype');
+}
+/*進場動畫設定*/
+/*放大進場*/
+@keyframes zoom-in {
+    from {
+      transform: scale(0) ;
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) ;
+      opacity: 1;
+    }
+  }
+
+/*mouse pic*/
+
+#sle-follow {
+  position: absolute;
+  display: none;
+  width: 50px;
+  z-index: 5;
+  overflow: hidden;
+}
+/*總body設定-------------*/
+.body{
+    background-color: #4DC47D;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: 'title_style', sans-serif;
+    animation: bg-image 0.1s linear 0.1s forwards;
+    padding: 0;
+    margin: 0;
+  }
+  
+  @keyframes bg-image {
+    to {
+      background-image: url('../pics/dboat_bg_ver2.png');
+    }
+  }
+
+/*第1段專用css----------------------------------------------------*/
+.div_n1{
+  height: 600px;
+}
+  /*頂部標題origion--------------*/
+  .div_top {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    /*標題文案*/
+    .h3{
+      font-size: 40px;
+      color: white;
+      font-weight: 900;
+      z-index: -1;
+      letter-spacing: 0.2em;
+    }
+    
+/*中央投票區--------------*/
+ /*最外段編寫*/
+ .div_election{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin: 0px 0 80px 0;
+ }
+    /*粽按鈕------------*/
+
+      /*南粽*/
+      .S_zong_word{
+        /*版面設定*/
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: #2e5261; 
+        }
+
+    .S_zong_div{
+        /*版面設定*/
+        opacity: 1; 
+        display: flex;
+        justify-content: center;
+    }
+
+      .S_zong_btn{
+          /*其他設定*/
+          width: 200px;
+          height: 200px;
+          animation-name: zoom-in;
+          animation-duration: 1s;
+          animation-delay: 1s; /* 延遲0.5秒後開始動畫 */
+          animation-fill-mode: forwards; 
+          opacity: 0;
+          z-index: 4;
+          cursor: pointer;
+      }
+
+    /*北粽*/
+    .N_zong_word{
+      /*版面設定*/
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      color: #2e5261; 
+      }
+
+    .N_zong_div{
+      /*版面設定*/
+      opacity: 1; 
+      display: flex;
+      justify-content: center;
+    }
+
+      .N_zong_btn{
+        /*其他設定*/
+        width: 200px;
+        height: 200px;
+        animation-name: zoom-in;
+        animation-duration: 1s;
+        animation-delay: 1s; /* 延遲0.5秒後開始動畫 */
+        animation-fill-mode: forwards; 
+        opacity: 0;
+        z-index: 4;
+        cursor: pointer;
+      }
+    /*屈原中央區*/
+    .div_center {
+        z-index: 0;
+      }
+      .main_cat {
+        width: 300px;
+        height: 300px;
+        z-index: 0;
+      }
+
+/*底部標題區---------------*/
+  .div_bottom {
+      /*background-color: white;*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+      height: 1em;
+    }
+
+  .h2{
+      font-size: 100px;
+      color: white;
+      font-weight: 900;
+      text-shadow: 1px 1px 5px #2e5261;
+      /*background-color: aliceblue;*/
+  }
+
+  /*line test*/
+  .l {
+      width: 100px;
+      height: 5px;
+  }
+
+  /*轉場css*/
+  .div_zoom_in{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /*background-color: blue;*/
+      opacity: 1;
+      z-index: 1;
+  }
+
+  /*貓手css*/
+  .cathands{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      z-index: 1;
+      /*display: none;*/
+  }
+  
+
+/*第2段專用css----------------------------------------------------------------------------*/
+/*23 combine section*/
+.sec23_combine{
+  padding: 0px;
+  background-color: #F8CB86;
+
+}
+
+.section2{
+  background-color: #9DD1E6;
+  height: 800px;
+  padding: 0vh;
+}
+
+.wave_class{
+  width: 100%;
+  height: 500px;
+}
+.wave_class_2{
+  width: 100%;
+  height: 600px;
+}
+.wave_class_3{
+  width: 100%;
+  height: 1100px;
+}
+
+/*第3段專用css----------------------------------------------------------------------------*/
+/*及時比數styles*/
+.goal_bg{
+  display:flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('../pics/for_arena_wave.png');
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: #9DD1E6;
+  overflow: hidden;
+}
+
+
+
+.live_goal{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: darkblue;*/
+  width: 900px;
+  height: 300px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.cloud{
+  position: relative;
+  bottom: -500px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.notice{
+  
+  font-size: 30px;
+  color: #2F5261;
+  z-index: 4;
+  position: relative;
+  top: 50px;
+  font-weight: 900;
+}
+
+.sun_outside{
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+  /*background-color: wheat;*/
+  /*margin: -500px 0 -100px 0;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -500px;  
+}
+
+.sun_outside_in{
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  /*background-color: #F7C355;*/
+}
+
+#sun{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+
+
+.SN_zong_score_board{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*background-color: white;*/
+}
+
+
+.arena_center{
+  margin: 20px;
+  padding: 10px;
+  height: 100%;
+  /*background-color: darkblue;*/
+}
+
+.score{
+  margin: 0;
+  font-size: 50px;
+  color: #2e5261;
+  font-weight: 900;
+}
+
+.score_number{
+  margin: 0;
+  font-size: 80px;
+  color: #2e5261;
+  font-weight: 900;
+}
+
+/* 形狀分隔線 */
+.divide_arc{
+  width: 100%;
+  margin: 0 0 -200px 0;
+}
+
+/*背景圖*/
+.arena_cloud{
+  position: relative;
+  z-index: 2;
+  /*margin:0 0 -500px 0;*/
+  overflow: hidden;
+  width: 50%;
+}
+#arena_cloud{
+  width: 50%;
+}
+
+/*第4段專用css----------------------------------------------------------------------------*/
+
+/*下落粽子*/
+.little_drop_zong{
+  display: flex;
+  justify-content: center;/*水平對齊*/
+  align-items: center;/*垂直對齊*/
+  background-color: #9DD1E6;
+  cursor: pointer;
+}
+
+#drop_zong{
+  margin: -100px 0 0 0;
+}
+
+
+/*店家資訊styles--------------------------------*/
+/*合作店家資訊大欄位*/
+.explore_div{
+  display: flex;
+  justify-content: center;/*水平對齊*/
+  align-items: center;/*垂直對齊*/
+  flex-direction: column;
+  background-color: #f8cb86;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+}
+
+/*標題*/
+.title_of_section_4{
+  margin: 0 0 0 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.h4{
+  color: #FF9700;
+  font-size: 80px;
+  margin: -20px 0 0 0;
+  letter-spacing: 0.2em;
+}
+
+.sub_h4{
+  color: #fdffe8;
+  font-size: 50px;
+}
+
+.store_name{
+  margin: 0;
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px #2e5261;
+}
+
+.store_content{
+  margin: 0;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px #2e5261;
+}
+
+.store_img{
+  width: 100px;
+  margin: 5px;
+  z-index: 1;
+}
+
+.store_img_logo{
+  width: 150px;
+  margin: 5px;
+  z-index: 1;
+}
+
+/*卡片靠左的店家定義*/
+.info_card_l{
+  width: 700px;
+  height: 700px;
+  display: flex;
+  justify-content: center;/*水平對齊*/
+  align-items: center;/*垂直對齊*/
+  /*background-color: rosybrown;*/
+  flex-direction: column;
+  margin: 0px 300px 10px 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.info_card_inside{
+  width: 400px;
+  display: flex;
+  justify-content: space-around;/*水平對齊*/
+  align-items: center;/*垂直對齊*/
+  flex-direction: row;
+  /*background-color: darkblue;*/
+}
+
+.store_artile{
+  display: flex;
+  justify-content: center;/*水平對齊*/
+  align-items: start;/*垂直對齊*/
+  flex-direction: column;
+  /*background-color: lightcoral;*/
+  margin: 5px;
+}
+
+.store_img_r{
+  width: 100px;
+  margin: 5px;
+}
+
+
+
+/*卡片靠右的店家定義*/
+.info_card_r{
+  width: 700px;
+  height: 700px;
+  display: flex;
+  justify-content: center;/*水平對齊*/
+  align-items: center;/*垂直對齊*/
+  /*background-color: rosybrown;*/
+  flex-direction: column;
+  margin: 0px 0px 0px 200px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.store_artile_r{
+  display: flex;
+  justify-content: center;/*水平對齊*/
+  align-items: start;/*垂直對齊*/
+  flex-direction: column;
+  /*background-color: lightcoral;*/
+  margin: 5px;
+}
+
+
+/*店家粽子派系*/
+  /*南粽派*/
+  .store_Szong_party{
+    width: 200px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /*南粽派背景*/
+  #Szong_party_bg{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: -100px 0 -100px 0;
+    z-index: 0;
+    overflow: hidden;
+    }
+    
+
+    /*北粽派*/
+    .store_Nzong_party{
+      width: 200px;
+      position: relative;
+      
+      z-index: 1;
+    }
+  
+    /*北粽派背景*/
+    #Nzong_party_bg{
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: -100px 0 -100px 0;
+      z-index: 0;
+      overflow: hidden;
+      }
+
+/* 14 */
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.btn-14 {
+  background: rgb(255,151,0);
+  border: none;
+  z-index: 3;
+}
+
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50px;
+  background-color: #eaf818;
+}
+
+.btn-14:hover {
+  color: #000;
+}
+
+.btn-14:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+
+.btn-14:active {
+  top: 2px;
+}
+
+/*活動規範 style----------------------------------------------------------------------------*/
+
+.detail_div{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.rule{
+  font-size: 45px;
+  display: flex;
+  align-items: start;
+  color: #5C9AC9;
+}
+.col-container{
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.col-header {
+  padding: 0px;
+  margin: 0 10px 0 0;
+  font-size: 18px;
+  color: white;
+}
+
+.col-content{
+font-size: 12px;
+color: #fdffe8;
+}
+
+/*footer style----------------------------------------------------------------------------*/
+.footer{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;/*水平對齊*/
+  align-items: center;/*垂直對齊*/
+  flex-direction: column;
+  background-color: #5C9AC9;
+  overflow: hidden;
+}
+
+.footer_d{
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.footer_content{
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: aliceblue;
+  z-index: 4;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+#blank_space-1{
+  height: 300px;
+}
+
+#blank_space-2{
+  height: 100px;
+}
+
+.ad{
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #5C9AC9;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+/*rwd設定 手機 --------------------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+
+  .score{
+    font-size: 30px;
+  }
+
+  .score_number{
+    font-size: 20px;
+  }
+
+  .N_zong_btn{
+    /*其他設定*/
+    animation-name: zoom-in;
+    animation-duration: 1s;
+    animation-delay: 0s; /* 延遲0.5秒後開始動畫 */
+    animation-fill-mode: forwards; 
+  }
+
+  .S_zong_btn{
+    /*其他設定*/
+    animation-name: zoom-in;
+    animation-duration: 1s;
+    animation-delay: 0s; /* 延遲0.5秒後開始動畫 */
+    animation-fill-mode: forwards; 
+  }
+  /* 在手機螢幕寬度小於等於480px時，將元素設置為display: none; */
+  .h4{
+    height: 1em;
+    font-size: 30px;
+    letter-spacing: 0em;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  #blank_space-1{
+    height: 50px;
+  }
+
+  #blank_space-2{
+    height: 10px;
+  }
+
+  .div_n1{
+    height: 200px;
+  }
+
+  .div_top{
+    height: 3em;
+  }
+
+  .cathands {
+    display: none;
+  }
+
+  #sle-follow{
+    display: none;
+  }
+
+  .div_bottom{
+    height: 2em;
+    margin: 0;
+  }
+  .h2{
+    font-size: 40px;
+    margin: 0;
+    padding: 5px;
+    background-color: #f8cb86;
+    border-color: #f8cb86;
+    border-radius: 50px;
+  }
+
+  .h3{
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .S_zong_word{
+    font-size: 15px;
+    margin: 0;
+    height: 1em;
+  }
+  
+  .N_zong_word{
+    font-size: 15px;
+    margin: 0;
+    height: 1em;
+  }
+
+  .div_election{
+    margin: 0;
+    justify-content: space-around;
+    height: 120px;
+  }
+
+  .S_zong_btn{
+    width: 80px;
+    height: 80px;
+    background-image: url('../pics/zong.svg');
+  }
+
+  .N_zong_btn{
+    width: 80px;
+    height: 80px;
+    background-image: url('../pics/N_zong.svg');
+  }
+
+  .main_cat{
+    width: 80px;
+    height: 80px;
+    background-image: url('../pics/cu_ver3.svg');
+  }
+
+  .section2{
+    display: none;
+  }
+
+  .sun_outside{
+    display: none;
+  }
+
+  .goal_bg{
+    background-image: none;
+    height: 300px;
+    padding: 10px;
+  }
+  .live_goal{
+    width: 100%;
+  }
+  .info_card_l{
+    width: 350px;
+    height: 100%;
+    margin: 20px;
+    background-color: #4DC47D;
+    border-radius: 100px;
+  }
+
+  .info_card_inside{
+    flex-direction: column;
+  }
+
+  .info_card_r{
+    width: 350px;
+    height: 100%;
+    margin: 20px;
+    background-color: #4F3A1F;
+    border-radius: 100px;
+  }
+
+  .title_of_section_4{
+    font-size: 20px;
+  }
+  .divide_arc{
+    margin: 0;
+  }
+
+  .store_Szong_party{
+    margin: 0;
+  }
+
+  .store_Nzong_party{
+    margin: 0;
+  }
+  .little_drop_zong{
+    display: none;
+  }
+  .detail_div{
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+  .N_zong_btn{
+    /*其他設定*/
+    animation-name: zoom-in;
+    animation-duration: 1s;
+    animation-delay: 0s; /* 延遲0.5秒後開始動畫 */
+    animation-fill-mode: forwards; 
+  }
+
+  .S_zong_btn{
+    /*其他設定*/
+    animation-name: zoom-in;
+    animation-duration: 1s;
+    animation-delay: 0s; /* 延遲0.5秒後開始動畫 */
+    animation-fill-mode: forwards; 
+  }
+ 
+
+  .h4{
+    height: 1em;
+    font-size: 50px;
+    letter-spacing: 0em;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  #blank_space-1{
+    height: 50px;
+  }
+
+  #blank_space-2{
+    height: 10px;
+  }
+
+  .div_n1{
+    height: 400px;
+  }
+
+  .div_top{
+    height: 5em;
+  }
+
+  .cathands {
+    display: none;
+  }
+
+  #sle-follow{
+    display: none;
+  }
+
+  .div_bottom{
+    height: 6em;
+    margin: 0;
+  }
+  .h2{
+    font-size: 60px;
+    margin: 0;
+    padding: 5px;
+    background-color: #f8cb86;
+    border-color: #f8cb86;
+    border-radius: 50px;
+  }
+
+  .h3{
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .S_zong_word{
+    font-size: 30px;
+    margin: 0;
+    height: 1em;
+  }
+  
+  .N_zong_word{
+    font-size: 30px;
+    margin: 0;
+    height: 1em;
+  }
+
+  .div_election{
+    margin: 0 0 80px 0;
+    justify-content: space-around;
+    height: 120px;
+  }
+
+  .S_zong_btn{
+    width: 120px;
+    height: 120px;
+    background-image: url('../pics/zong.svg');
+  }
+
+  .N_zong_btn{
+    width: 120px;
+    height: 120px;
+    background-image: url('../pics/N_zong.svg');
+  }
+
+  .main_cat{
+    width: 200px;
+    height: 200px;
+    background-image: url('../pics/cu_ver3.svg');
+  }
+
+  .section2{
+    display: none;
+  }
+
+  .sun_outside{
+    display: none;
+  }
+
+  .goal_bg{
+    background-image: none;
+    height: 300px;
+    padding: 10px;
+  }
+  .info_card_l{
+    width: 350px;
+    height: 100%;
+    margin: 30px 250px 30px 30px;
+    background-color: #4DC47D;
+    border-radius: 100px;
+  }
+
+  .info_card_inside{
+    flex-direction: column;
+  }
+
+  .info_card_r{
+    width: 350px;
+    height: 100%;
+    margin: 30px 30px 30px 250px;
+    background-color: #4F3A1F;
+    border-radius: 100px;
+  }
+
+  .title_of_section_4{
+    font-size: 20px;
+  }
+  .divide_arc{
+    margin: 0;
+  }
+
+  .store_Szong_party{
+    margin: 0;
+  }
+
+  .store_Nzong_party{
+    margin: 0;
+  }
+  .little_drop_zong{
+    display: none;
+  }
+}

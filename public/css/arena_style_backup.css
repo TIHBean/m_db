@@ -1,0 +1,71 @@
+/*字體設定*/
+/*字體設定*/
+  @font-face {
+      font-family: 'title_style';
+      src: url('../fonts/HanyiSentyTang.ttf') format('truetype');
+  }
+/*進場動畫設定*/
+/*放大進場*/
+  @keyframes zoom-in {
+      from {
+        transform: scale(0) ;
+        opacity: 0;
+      }
+      to {
+        transform: scale(1) ;
+        opacity: 1;
+      }
+    }
+
+/*總空間設定*/
+  .body{
+      background-color: #4DC47D;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-image: url('../pics/areana_bg-01.png'); 
+      font-family: 'title_style', sans-serif;
+  }
+
+/*內部排版相關設定*/
+  /*總grid*/
+  .main_arena{
+    background-color: #ffffff50;
+    margin: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  /**/
+  .arena_center {
+      background-color: yellow;
+      width: 600px;
+    }
+
+  
+/*南北粽數字id資料*/
+  #s_h2{
+      font-size: 50px;
+      color: white;
+      font-weight: 900;
+      text-shadow: 1px 1px 5px black;
+      animation-name: zoom-in;
+      animation-duration: 1s;
+      animation-delay: 0.1s; /* 延遲0.1秒後開始動畫 */
+      animation-fill-mode: forwards; 
+      opacity: 0;
+  }
+
+  #n_h2{
+    font-size: 50px;
+    color: red;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px black;
+    animation-name: zoom-in;
+    animation-duration: 1s;
+    animation-delay: 0.1s; /* 延遲0.1秒後開始動畫 */
+    animation-fill-mode: forwards; 
+    opacity: 0;
+  }
+
+
+

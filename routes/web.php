@@ -35,3 +35,8 @@ Route::get('/cat_flow_main/Szong', 'Zong_count@Szong');
 Route::get('/cat_flow_main/Nzong', 'Zong_count@Nzong');
 
 Route::get('cat_flow_main/getData', 'Zong_count@getData');
+
+//Ben add for git demo
+Route::get('/4demo/4demo', function () {
+    echo 'demo';
+});
